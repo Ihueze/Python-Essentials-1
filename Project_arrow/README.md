@@ -12,6 +12,7 @@ We strongly encourage you to play with the code we've written for you, and make 
 
 ## Try to:
 
+```python
 print("    *")
 print("   * *")
 print("  *   *")
@@ -20,6 +21,7 @@ print("***   ***")
 print("  *   *")
 print("  *   *")
 print("  *****")
+```
 
 - Minimize the number of `print()` function invocations by inserting the `\n` sequence into the strings (Arrow.py)
 - Make the arrow twice as large (but keep the proportions)
