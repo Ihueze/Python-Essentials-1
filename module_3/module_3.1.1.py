@@ -1,4 +1,4 @@
-""" 
+"""
 Questions and answers
 
 A programmer writes a program and the program asks questions.
@@ -11,6 +11,8 @@ yes, this is true;
 no, this is false.
 You will never get a response like Let me think...., I don't know, or Probably yes, but I don't know for sure.
 
-To ask questions, Python uses a set of very special operators. Let's go through them one after another, illustrating their effects on some simple examples.
+To ask questions, Python uses a set of very special operators. 
+
+Let's go through them one after another, illustrating their effects on some simple examples.
 
 """
