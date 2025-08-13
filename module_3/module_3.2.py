@@ -1,3 +1,15 @@
+"""
+Let's go back to the sketch of the algorithm we showed you recently. 
+We're going to show you how to use this newly learned loop to find the largest number from a large set of entered data.
+
+
+Analyze the program carefully. See where the loop starts (line 8). Locate the loop's body and find out how the body is exited:
+
+"""
+
+# Solution
+
+
 # Store the current largest number here.
 largest_number = -999999999
 
