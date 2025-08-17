@@ -2,144 +2,34 @@
 Objectives
 Familiarize the student with:
 
-using the while loop;
-converting verbally defined loops into actual Python code.
+using basic instructions related to lists;
+creating and modifying lists.
 Scenario
-In 1937, a German mathematician named Lothar Collatz formulated an intriguing hypothesis (it still remains unproven) which can be described in the following way:
+There once was a hat. The hat contained no rabbit, 
+but a list of five numbers: 1, 2, 3, 4, and 5.
 
-take any non-negative and non-zero integer number and name it c0;
-if it's even, evaluate a new c0 as c0 ÷ 2;
-otherwise, if it's odd, evaluate a new c0 as 3 × c0 + 1;
-if c0 ≠ 1, skip to point 2.
-The hypothesis says that regardless of the initial value of c0, it will always go to 1.
+Your task is to:
 
-Of course, it's an extremely complex task to use a computer in order to prove the hypothesis for any natural number (it may even require artificial intelligence), but you can use Python to check some individual numbers. Maybe you'll even find the one which would disprove the hypothesis.
-
-
-Write a program which reads one natural number and executes the above steps as long as c0 remains different from 1. We also want you to count the steps needed to achieve the goal. Your code should output all the intermediate values of c0, too.
-
-Hint: the most important part of the problem is how to transform Collatz's idea into a while loop - this is the key to success.
-
-Test your code using the data we've provided.
-
-Test Data
-
-Sample input: 15
-
-Expected output:
-
-46
-23
-70
-35
-106
-53
-160
-80
-40
-20
-10
-5
-16
-8
-4
-2
-1
-steps = 17
-Sample input: 16
-
-Expected output:
-
-8
-4
-2
-1
-steps = 4
-Sample input: 1023
-
-Expected output:
-
-3070
-1535
-4606
-2303
-6910
-3455
-10366
-5183
-15550
-7775
-23326
-11663
-34990
-17495
-52486
-26243
-78730
-39365
-118096
-59048
-29524
-14762
-7381
-22144
-11072
-5536
-2768
-1384
-692
-346
-173
-520
-260
-130
-65
-196
-98
-49
-148
-74
-37
-112
-56
-28
-14
-7
-22
-11
-34
-17
-52
-26
-13
-40
-20
-10
-5
-16
-8
-4
-2
-1
-steps = 62
+write a line of code that prompts the user to replace the middle number in 
+the list with an integer number entered by the user (Step 1)
+write a line of code that removes the last element from the list (Step 2)
+write a line of code that prints the length of the existing list (Step 3).
 
 """
+
 # Solution
 
-# Read a natural number from the user
-c0 = int(input("Enter a natural number: "))
+# This is an existing list of numbers hidden in the hat.
+hat_list = [1, 2, 3, 4, 5]
 
-steps = 0  # to count the steps
+# Step 1: write a line of code that prompts the user
+# to replace the middle number with an integer number entered by the user.
+hat_list[2] = int(input("Enter a number: "))
 
-# Run the Collatz process until c0 becomes 1
-while c0 != 1:
-    print(c0)  # show the current value
-    if c0 % 2 == 0:   # if even
-        c0 = c0 // 2
-    else:             # if odd
-        c0 = 3 * c0 + 1
-    steps += 1  # count the step
+# Step 2: write a line of code that removes the last element from the list.
+del hat_list[4]
 
-# Print the final 1 and the total number of steps
-print(c0)
-print("Total steps:", steps)
+# Step 3: write a line of code that prints the length of the existing list.
+print("The lenght", len(hat_list))
+
+print(hat_list)
