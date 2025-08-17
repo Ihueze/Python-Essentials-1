@@ -2,63 +2,58 @@
 Objectives
 Familiarize the student with:
 
-using the continue statement in loops;
-modifying and upgrading the existing code;
+using the while loop;
+finding the proper implementation of verbally defined rules;
 reflecting real-life situations in computer code.
 Scenario
-Your task here is even more special than before: you must redesign the (ugly) vowel eater from the previous 
-lab (3.1.2.10) and create a better, upgraded (pretty) vowel eater! Write a program that uses:
+Listen to this story: a boy and his father, a computer programmer, are playing with wooden blocks. They are building a pyramid.
 
-a for loop;
-the concept of conditional execution (if-elif-else)
-the continue statement.
-Your program must:
-
-ask the user to enter a word;
-use user_word = user_word.upper() to convert the word entered by the user to upper case; we'll talk about the 
-so-called string methods and the upper() method very soon - don't worry;
-use conditional execution and the continue statement to "eat" the following vowels A, E, I, O, U from the inputted word;
-assign the uneaten letters to the word_without_vowels variable and print the variable to the screen.
-Look at the code in the editor. We've created word_without_vowels and assigned an empty string to it. 
-Use concatenation operation to ask Python to combine selected letters into a longer string during 
-subsequent loop turns, and assign it to the word_without_vowels variable.
-
-Test your program with the data we've provided for you.
+Their pyramid is a bit weird, as it is actually a pyramid-shaped wall - it's flat. 
+The pyramid is stacked according to one simple principle: each lower layer contains one block more than the layer above.
 
 
-Test data
-Sample input: Gregory
+The figure illustrates the rule used by the builders:
 
-Expected output:
 
-GRGRY
-Sample input: abstemious
 
-Expected output:
+Your task is to write a program which reads the number of blocks the builders have, 
+and outputs the height of the pyramid that can be built using these blocks.
 
-BSTMS
-Sample input: IOUEA
+Note: the height is measured by the number of fully completed layers - if the builders don't have a 
+sufficient number of blocks and cannot complete the next layer, they finish their work immediately.
 
-Expected output:
+Test your code using the data we've provided.
+
+
+Test Data
+
+Sample input: 6
+
+Expected output: The height of the pyramid: 3
+
+Sample input: 20
+
+Expected output: The height of the pyramid: 5
+
+Sample input: 1000
+
+Expected output: The height of the pyramid: 44
+
+Sample input: 2
+
+Expected output: The height of the pyramid: 1
 
 """
 # Solution
 
-word_without_vowels = ""
+blocks = int(input("Enter the number of blocks: "))
 
-# Prompt the user to enter a word
-# and assign it to the user_word variable.
-user_word = input("Enter a word:")
+height = 0
+next_layer = 1
 
-# convert to upper letters
-user_word = user_word.upper()
+while blocks >= next_layer:
+    blocks -= next_layer
+    height += 1
+    next_layer += 1
 
-for letter in user_word:
-    # Complete the body of the loop.
-    if letter in "AEIOU":
-        continue
-    word_without_vowels += letter
-
-
-# Print the word assigned to word_without_vowels.
-print(word_without_vowels)
+print("The height of the pyramid:", height)
